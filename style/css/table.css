@@ -1,0 +1,110 @@
+
+/**********表格**************/
+#table #table_data{
+	width:100%;
+}
+
+th {  
+    font: bold 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;  
+    color: #4A4A4A;  
+    border-right: 1px solid #C1DAD7;  
+    border-bottom: 2px solid #C1DAD7;  
+    border-top: 1px solid #C1DAD7;  
+    border-left: 1px solid #C1DAD7;  
+    letter-spacing: 2px;  
+    text-transform: uppercase;  
+    text-align: center;
+	height:40px;
+	line-height:40px;
+    background: #FFF;  
+} 
+  
+td {  
+    border-right: 1px solid #C1DAD7;  
+    border-bottom: 1px solid #C1DAD7; 
+    padding: 3px 3px 3px 6px;  
+    color: #4f6b72;  
+	min-width:50px;
+	max-width:50%;
+	text-align:center;
+} 
+
+th input{
+	width:16px;
+	height: 16px;
+	text-align: center;
+	line-height: 40px;
+}
+
+td input{
+	width:16px;
+	height: 16px;
+}
+
+td:nth-child(1){
+	border-left: 1px solid #C1DAD7;  
+    border-top: 0;    
+    font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+}
+
+tr:nth-child(odd)
+{
+	background:#F9F9F9;
+}
+tr:nth-child(even)
+{
+	background:#ffffff;
+}
+
+tr:hover{
+	background:#F9F9F9;
+}
+ 
+
+#table #table_loading{
+	text-align:center;
+	margin:5px;
+}
+
+
+#pager{
+	clear:both;
+}
+
+#pager a{
+	color:#0000CC;
+}
+
+
+#pager a:hover{
+	border:1px solid #3388FF;
+}
+
+
+#pager a{
+	border:1px solid #E1E2E3;
+	display:inline-block;
+	padding:4px;
+	text-align:center;
+	text-decoration:none;
+	margin:2px;
+	min-width:40px;
+	color:#a17ef1;
+}
+
+#pager span{
+	display:inline-block;
+	min-width:40px;
+	color:#ccc;
+	padding:4px;
+	margin:2px;
+	text-align:center;
+	border:1px solid #E1E2E3;
+}
+
+
+#table_toolbar{
+height:50px;
+line-height:50px;
+margin-right:10px;
+}

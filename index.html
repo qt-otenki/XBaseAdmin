@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="Generator" content="EditPlus®" />
+  <meta name="Author" content="" />
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <title>DzAdmin后台框架</title>
+  <link rel="stylesheet" href="style/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style/css/admin.css" />
+
+  <!--  调用顺序请保持一致 -->
+  <script src="style/js/jquery-3.2.1.min.js"></script>
+  <script src="style/js/loading.js"></script>
+  <script src="style/js/admin.js"></script>
+  
+  <script>
+  	
+  	
+	 function menuBarOnClick(index,url){
+		 alert("触发头部菜单事件");
+	 }
+  </script>
+ </head>
+ <body>
+	<div id="header">
+		<span id="header_logo_panel"><img id="header_logo" src="http://www.cleveriip.com/style/home/img/logo.png" /></span>
+
+		<span id="header_name">DzAdmin综合后台系统</span>
+		
+		<span id="header_user">超级管理员   
+			<div id="header_menu">
+				<a data-href="http://www.baidu.com">个人中心</a>
+				<a data-href="http://www.sohu.com">我的订单</a>
+				<a data-href="exit;">退出</a>
+			</div>
+		</span>
+	</div>
+	
+
+	<div id="wrap">
+		<div id="left">
+			<div class="sidebar">
+				<ul>
+				  <li class="title"><span class="glyphicon glyphicon-link"></span><span>常用的网站</span><span class="arrow"></span>
+					<ul class="in-sidebar">
+					  <li><a data-url="http://www.baidu.com">百度</a></li>
+					  <li><a data-url="http://www.sohu.com">搜狐</a></li>
+					  <li><a data-url="http://www.qq.com">腾讯</a></li>
+					  <li><a data-url="http://www.163.com">网易</a></li>
+					</ul>
+				  </li>
+
+				  <li class="title"><span class="glyphicon glyphicon-expand"></span><span>安卓IOS基础教程</span><span class="arrow"></span>
+					<ul class="in-sidebar">
+					  <li><a data-url="http://www.baidu.com">IOS基础教程1</a></li>
+					  <li><a data-url="http://www.baidu.com">IOS基础教程2</a></li>
+					  <li><a data-url="http://www.baidu.com">IOS基础教程3</a></li>
+					  <li><a data-url="http://www.baidu.com">IOS基础教程4</a></li>
+					  <li><a data-url="http://www.baidu.com">IOS基础教程5</a></li>
+					</ul>
+				  </li>
+				</ul>
+			  </div>
+		</div>
+
+		<div id="right">
+			<div id="nav">当前位置：<a href="javascript:desktop();">我的桌面</a> <span class="nav_divider">/</span> <span id="nav_first">系统桌面</span> <span class="nav_divider">/</span> <a href="#" id="nav_second"></a> <span  id="iframe_refresh" class="glyphicon glyphicon-refresh"></span></div>
+			<iframe src="iframe-index.html" id="iframe" />
+		</div>
+	</div>
+ </body>
+</html>
