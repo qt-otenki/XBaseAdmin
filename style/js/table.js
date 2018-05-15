@@ -20,8 +20,7 @@ var nextPage = "&raquo;";
 				if(args.current > 1){
 					obj.append('<a href="javascript:;" class="prevPage">'+ prePage +'</a>');
 				}else{
-					obj.remove('.prevPage');
-					obj.append('<span class="disabled">'+ prePage +'</span>');
+					obj.append('<span class="prevPage">'+ prePage +'</span>');
 				}
 				//中间页码    可不要
 				if(args.current != 1 && args.current >= 4 && args.pageCount != 4){
@@ -58,8 +57,7 @@ var nextPage = "&raquo;";
 				if(args.current < args.pageCount){
 					obj.append('<a href="javascript:;" class="nextPage">'+ nextPage +'</a>');
 				}else{
-					obj.remove('.nextPage');
-					obj.append('<span class="disabled">'+ nextPage +'</span>');
+					obj.append('<span class="nextPage">'+ nextPage +'</span>');
 				}
 			})();
 		},

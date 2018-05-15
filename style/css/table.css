@@ -69,6 +69,7 @@ tr:hover{
 
 #pager{
 	clear:both;
+	margin-top: 5px;
 }
 
 #pager a{
@@ -82,12 +83,13 @@ tr:hover{
 
 
 #pager a{
-	border:1px solid #E1E2E3;
+	border-right:1px solid #CCC;
+	border-top:1px solid #CCC;
+	border-bottom:1px solid #CCC;
 	display:inline-block;
 	padding:4px;
 	text-align:center;
 	text-decoration:none;
-	margin:2px;
 	min-width:40px;
 	color:#a17ef1;
 }
@@ -97,9 +99,20 @@ tr:hover{
 	min-width:40px;
 	color:#ccc;
 	padding:4px;
-	margin:2px;
 	text-align:center;
-	border:1px solid #E1E2E3;
+	border-right:1px solid #CCC;
+	border-top:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+}
+
+#pager .prevPage{
+	border-radius:5px 0px 0px 5px;
+	border-right:1px solid #ccc;
+	border-left:1px solid #ccc;
+}
+
+#pager .nextPage{
+	border-radius:0px 5px 5px 0px;
 }
 
 
