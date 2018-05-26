@@ -14,16 +14,6 @@ var iframe_refresh;
 var tmp;
 var desktop_link;
 
-
-//设置主题  可自定义
-var theme_id = 0;
-var theme = Array();
-theme[0] = "#21BA9B";//默认
-theme[1] = "#388CBE";//大方
-theme[2] = "#EEC7C7";//小清新
-theme[3] = "#EC7E7E"//希望
-theme[4] = "#D4D584";//夕阳
-
 function initWindow(){
 	var height = $(window).height();
 	var width = $(window).width();
@@ -34,7 +24,9 @@ function initWindow(){
 
 $(document).ready(function(){
 	initWindow();
-	$("#right").append("<div id='copyright'>XBaseWeb后台管理平台</div>");
+	
+	$("#header_name").text(projectName);
+	$("#right").append("<div id='copyright'>"+ copyRight +"</div>");
 	mTitle = null;
 	title = $('.sidebar .title');
 	con = $('.title > ul');
@@ -46,7 +38,7 @@ $(document).ready(function(){
 	desktop_link = iframe.attr("src");
 	header = $("#header");
 
-	header.css("background",theme[theme_id]);
+	header.css("background",theme[themeId]);
 
 	$("#header_user").mouseover(function(){
 		$("#header_menu").show();

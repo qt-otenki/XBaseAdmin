@@ -7,6 +7,7 @@
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <script src="style/js/jquery-3.2.1.min.js"></script>
+  <script src="style/js/dialog-plus.js"></script>
   <script src="style/js/child.js"></script>
   <script src="style/js/validation.js"></script>
  
@@ -14,14 +15,40 @@
  </head>
  <body>
 	校验模块
-	<form id="form" action="data.php" onsubmit="return validation('form');">
-		姓名：<input type="text" name="name" /><br />
-		密码：<input type="password" name="password" /><br />
-		年龄：<input type="number" name="age" /><br />
+	<form id="form" action="data.php" onsubmit="return validation('form',fun);">
+		姓名：<input type="text" name="name" regex="^\d{1}$" maxlength=5 message="请输入正确的姓名" /><br />
+		密码：<input type="password" name="password" message="请输入密码" /><br />
+		年龄：<input type="number" name="age" message="请输入年龄" /><br />
 		介绍：
 		<textarea name="about"></textarea>
 		<br />
 		<button>提交注册</button>
 	</form>
+	
+	<div>
+		1.默认校验所有字段，不校验的字段请加pass<br />
+		2.校验可以编写“message”属性用于显示。<br />
+		3.限制输入长度“maxlength” 即可。<br />
+	</div>
+	
+	<script type="text/javascript">
+		//校验回调方法
+		var fun = function(obj,message){
+			var d = dialog({
+				title: '温馨提示',
+				content: message,
+				okValue: '确定',
+				ok: function () {
+					d.close();
+					return false;
+				},
+				cancelValue: '取消',
+				cancel: function () {
+					d.close();
+				}
+			});
+			d.show();
+		}
+	</script>
  </body>
 </html>
