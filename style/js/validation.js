@@ -63,17 +63,17 @@ function stringEmpty(val){
  * @param {Object} obj
  * @param {Object} callback
  */
-function checkForm(obj,callback){
-	if(checkTag(obj,"pass")){
+function checkInputForm(obj,callback){
+	if(checkTag(obj,"ispass")){
 		return true;
 	}
 	
 	var inputType = getTagValue(obj,"type").toLowerCase();
 	var inputValue = getInputValue(obj);
 	var showMessage = getTagValue(obj,"message");
-	if(inputType == "text"){
+//	if(inputType == "text"){
 		if(stringEmpty(inputValue)){
-			callback(obj,showMessage);
+			callback(false,obj,showMessage,[]);
 			obj.focus();
 			return false;
 		}
@@ -81,26 +81,86 @@ function checkForm(obj,callback){
 		if(checkTag(obj,"regex")){
 			var regexValue = getTagValue(obj,"regex");
 			if(!test(inputValue,regexValue)){
-				callback(obj,showMessage);
+				callback(false,obj,showMessage,[]);
 				obj.focus();
 				return false;
 			}
 		}
-	}
+//	}
+	return true;
 }
 
 /**
- * 校验入口
- * @param {Object} formId
+ * 校验多文本框
+ * @param {Object} obj
  * @param {Object} callback
  */
-function validation(formId,callback){
+function checkTextAreaForm(obj,callback){
+	if(checkTag(obj,"ispass")){
+		return true;
+	}
+	
+	var inputValue = getInputValue(obj);
+	var showMessage = null;
+	if(checkTag(obj,"message"))
+		showMessage = getTagValue(obj,"message");
+	else
+		showMessage = "请填写完整";
+	
+
+	if(stringEmpty(inputValue)){
+		callback(false,obj,showMessage,[]);
+		obj.focus();
+		return false;
+	}
+	
+	
+	if(checkTag(obj,"regex")){
+		var regexValue = getTagValue(obj,"regex");
+		if(!test(inputValue,regexValue)){
+			callback(false,obj,showMessage,[]);
+			obj.focus();
+			return false;
+		}
+	}
+	return true;
+}
+
+/**
+ * 
+ * @param {Object} formId		表单ID
+ * @param {Object} isAuto		是否自动提交
+ * @param {Object} callback		回调函数
+ */
+function validation(formId,isAuto,callback){
 	formId = "#" + formId;
 	var validObj = $(formId);
 	var status = true;
 	$(formId +" input").each(function(){
-		status = checkForm($(this),callback);
-		return status;
+		status = checkInputForm($(this),callback);
+		if(!status){
+			return false;
+		}	
 	});
-	return status;
+	
+	if(!status){
+			return false;
+		}
+	
+	//校验textarea
+	$(formId +" textarea").each(function(){
+		status = checkTextAreaForm($(this),callback);
+		if(!status)
+			return false;
+	});
+	
+	if(status){
+		var formArr = $(formId).serializeArray();
+		var json = [];
+		for(var i=0,l=formArr.length;i<l;i++){
+			json.push(formArr[i]["name"],formArr[i]["value"]);
+		}
+		callback(true,$(this),"success",json);
+	}
+	return isAuto;
 }
