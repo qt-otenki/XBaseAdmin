@@ -49,3 +49,8 @@ function showLoading(title){
 function closeLoading(){
 	getParent().closeLoading();
 }
+
+//界面跳转
+function redirect(url){
+	document.location.href = url;
+}
