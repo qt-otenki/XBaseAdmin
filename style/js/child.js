@@ -13,7 +13,7 @@ function openWindow(url){
 }
 
 //创新当前窗口
-function refresh(){
+function refreshWindow(){
 	getParent().refresh();
 }
 
@@ -21,24 +21,6 @@ function refresh(){
 function desktop(){
 	getParent().desktop();
 }
-
-//返回上一级
-function go(type){
-	window.history.go(type);
-}
-
-function refresh(){
-	go(0);
-}
-
-function back(){
-	go(-1);
-}
-
-function forward(){
-	go(1);
-}
-
 
 //打开加载中
 function showLoading(title){

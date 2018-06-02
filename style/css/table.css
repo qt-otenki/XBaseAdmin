@@ -1,123 +1,121 @@
-
 /**********表格**************/
-#table #table_data{
-	width:100%;
+#table #table_data {
+    width: 100%;
 }
 
-th {  
-    font: bold 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;  
-    color: #4A4A4A;  
-    border-right: 1px solid #C1DAD7;  
-    border-bottom: 2px solid #C1DAD7;  
-    border-top: 1px solid #C1DAD7;  
-    border-left: 1px solid #C1DAD7;  
-    letter-spacing: 2px;  
-    text-transform: uppercase;  
+th {
+    font: bold 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #4A4A4A;
+    border-right: 1px solid #C1DAD7;
+    border-bottom: 2px solid #C1DAD7;
+    border-top: 1px solid #C1DAD7;
+    border-left: 1px solid #C1DAD7;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     text-align: center;
-	height:40px;
-	line-height:40px;
-    background: #FFF;  
-} 
-  
-td {  
-    border-right: 1px solid #C1DAD7;  
-    border-bottom: 1px solid #C1DAD7; 
-    padding: 3px 3px 3px 6px;  
-    color: #4f6b72;  
-	min-width:50px;
-	max-width:50%;
-	text-align:center;
-} 
-
-th input{
-	width:16px;
-	height: 16px;
-	text-align: center;
-	line-height: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #FFF;
 }
 
-td input{
-	width:16px;
-	height: 16px;
+td {
+    border-right: 1px solid #C1DAD7;
+    border-bottom: 1px solid #C1DAD7;
+    padding: 3px 3px 3px 6px;
+    color: #4f6b72;
+    min-width: 50px;
+    max-width: 50%;
+    text-align: center;
 }
 
-td:nth-child(1){
-	border-left: 1px solid #C1DAD7;  
-    border-top: 0;    
-    font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+th input {
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 40px;
 }
 
-tr:nth-child(odd)
-{
-	background:#F9F9F9;
-}
-tr:nth-child(even)
-{
-	background:#ffffff;
+td input {
+    width: 16px;
+    height: 16px;
 }
 
-tr:hover{
-	background:#F9F9F9;
-}
- 
-
-#table #table_loading{
-	text-align:center;
-	margin:5px;
+td:nth-child(1) {
+    border-left: 1px solid #C1DAD7;
+    border-top: 0;
+    font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 }
 
-
-#pager{
-	clear:both;
-	margin-top: 5px;
+tr:nth-child(odd) {
+    background: #F9F9F9;
 }
 
-#pager a{
-	color:#0000CC;
+tr{
+    height: 36px;
+    line-height: 36px;
 }
 
-
-#pager a:hover{
-	border:1px solid #3388FF;
+tr:nth-child(even) {
+    background: #ffffff;
 }
 
-
-#pager a{
-	border-right:1px solid #CCC;
-	border-top:1px solid #CCC;
-	border-bottom:1px solid #CCC;
-	display:inline-block;
-	padding:4px;
-	text-align:center;
-	text-decoration:none;
-	min-width:40px;
-	color:#a17ef1;
+tr:hover {
+    background: #F9F9F9;
 }
 
-#pager span{
-	display:inline-block;
-	min-width:40px;
-	color:#ccc;
-	padding:4px;
-	text-align:center;
-	border-right:1px solid #CCC;
-	border-top:1px solid #CCC;
-	border-bottom:1px solid #CCC;
+#table #table_loading {
+    text-align: center;
+    margin: 5px;
 }
 
-#pager .prevPage{
-	border-radius:5px 0px 0px 5px;
-	border-right:1px solid #ccc;
-	border-left:1px solid #ccc;
+#pager {
+    clear: both;
+    height:40px;
+    margin-top: 5px;
 }
 
-#pager .nextPage{
-	border-radius:0px 5px 5px 0px;
+#pager a {
+    color: #0000CC;
 }
 
+#pager a:hover {
+    border: 1px solid #3388FF;
+}
 
-#table_toolbar{
-height:50px;
-line-height:50px;
-margin-right:10px;
+#pager a {
+    border-right: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    display: inline-block;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 40px;
+    color: #a17ef1;
+}
+
+#pager span {
+    display: inline-block;
+    min-width: 40px;
+    color: #ccc;
+    padding: 4px;
+    text-align: center;
+    border-right: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+
+#pager .prevPage {
+    border-radius: 5px 0px 0px 5px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+#pager .nextPage {
+    border-radius: 0px 5px 5px 0px;
+}
+
+#table_toolbar {
+    height: 50px;
+    line-height: 50px;
 }

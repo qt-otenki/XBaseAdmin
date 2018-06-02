@@ -14,24 +14,20 @@
   <script src="style/js/setting.js"></script>
   <script src="style/js/jquery-3.2.1.min.js"></script>
   <script src="style/js/image-lazy.js"></script>
-  <script src="style/js/http.js"></script>
+  <script src="style/js/request.js"></script>
   <script src="style/js/loading.js"></script>
   <script src="style/js/admin.js"></script>
   
   <script>
-  	
 	 function menuBarOnClick(index,url){
 		 alert("触发头部菜单事件");
 	 }
-	
   </script>
  </head>
  <body>
 	<div id="header">
 		<span id="header_logo_panel"><img id="header_logo" src="http://www.cleveriip.com/style/home/img/logo.png" /></span>
-
 		<span id="header_name"></span>
-		
 		<span id="header_user">超级管理员   
 			<div id="header_menu">
 				<a data-href="http://www.baidu.com">个人中心</a>
@@ -46,24 +42,23 @@
 		<div id="left">
 			<div class="sidebar">
 				<ul>
-				  <li class="title"><span class="glyphicon glyphicon-link"></span><span>常用的网站</span><span class="arrow"></span>
+				 
+				 <li class="title">
+				  	<div class="childTitle"><span class="glyphicon glyphicon-link"></span><span>常用的网站</span><span class="arrow"></span></div>
 					<ul class="in-sidebar">
-					  <li><a data-url="http://www.baidu.com">百度</a></li>
-					  <li><a data-url="http://www.sohu.com">搜狐</a></li>
-					  <li><a data-url="http://www.qq.com">腾讯</a></li>
-					  <li><a data-url="http://www.163.com">网易</a></li>
+					  <li data-url="http://www.baidu.com"><span class="glyphicon glyphicon-link"></span><span>百度</span></li>
 					</ul>
 				  </li>
-
-				  <li class="title"><span class="glyphicon glyphicon-expand"></span><span>安卓IOS基础教程</span><span class="arrow"></span>
+				  
+				  
+				  <li class="title">
+				  	<div class="childTitle"><span class="glyphicon glyphicon-link"></span><span>常用的网站2</span><span class="arrow"></span></div>
 					<ul class="in-sidebar">
-					  <li><a data-url="http://www.baidu.com">IOS基础教程1</a></li>
-					  <li><a data-url="http://www.baidu.com">IOS基础教程2</a></li>
-					  <li><a data-url="http://www.baidu.com">IOS基础教程3</a></li>
-					  <li><a data-url="http://www.baidu.com">IOS基础教程4</a></li>
-					  <li><a data-url="http://www.baidu.com">IOS基础教程5</a></li>
+					  <li data-url="http://www.baidu.com"><span class="glyphicon glyphicon-link"></span><span>百度</span></li>
 					</ul>
 				  </li>
+				  
+				 
 				</ul>
 			  </div>
 		</div>

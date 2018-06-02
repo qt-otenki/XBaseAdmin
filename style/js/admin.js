@@ -3,7 +3,6 @@
 //		DzAdmin 1.0.6
 //============================================
 var header;
-var mTitle;
 var title;
 var con;
 var link;
@@ -11,7 +10,6 @@ var nav_first;
 var nav_second;
 var iframe;
 var iframe_refresh;
-var tmp;
 var desktop_link;
 
 function initWindow(){
@@ -27,10 +25,11 @@ $(document).ready(function(){
 	
 	$("#header_name").text(projectName);
 	$("#right").append("<div id='copyright'>"+ copyRight +"</div>");
-	mTitle = null;
-	title = $('.sidebar .title');
+	document.title = projectName;
+
+	title = $('.childTitle');
 	con = $('.title > ul');
-	link = $(".in-sidebar li a");
+	link = $(".in-sidebar li");
 	nav_first = $("#nav_first");
 	nav_second = $("#nav_second");
 	iframe = $("#iframe");
@@ -62,22 +61,17 @@ $(document).ready(function(){
 
 	title.click(function(){
 		var t = $(this).find("span").eq(1).text();
-		if(mTitle == null){
-			mTitle = t;
-		}else{
-			if(mTitle == t){
-				return ;
-			}
-		}
-
-		$(tmp).children('ul').slideUp().end().children('.arrow').removeClass('arrow-up');
-		$(this).children('ul').slideToggle().end().children('.arrow').addClass('arrow-up');
+		var menuItem = $(this).next();
+		var arrow = $(this).children('span').eq(2);
 		
-		tmp = this;
-
-		mTitle = t;
-		nav_first.text(mTitle);
-		nav_second.text("").attr("src","#");
+		if(menuItem.css("display") == "none"){
+			menuItem.slideDown();
+			arrow.removeClass("arrow").addClass("arrow-up");
+		}else{
+			menuItem.slideUp();
+			arrow.removeClass("arrow-up").addClass("arrow");
+		}
+		nav_first.text(t);
 	});
 
 	con.click(function(){
@@ -87,7 +81,7 @@ $(document).ready(function(){
 	link.click(function(){
 		var linkText = $(this).text();
 		var linkSrc = $(this).attr("data-url");
-		nav_second.attr("src","#").text(linkText);
+		nav_second.attr("src",linkSrc).text(linkText);
 		openWindow(linkSrc);
 	});
 
@@ -98,7 +92,7 @@ $(document).ready(function(){
 
 //=======需要继承的方法========
 function menuBarOnClick(index,url){
-	alert("请在您的主界面中实现MenuBarOnClick(index,url)方法");
+	alert("请在您的主界面中实现menuBarOnClick(index,url)方法");
 }
 
 //========菜单相关的操作=========
