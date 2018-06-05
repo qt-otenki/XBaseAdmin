@@ -92,6 +92,10 @@ function imageController(value){
 |data-name|name|字段名，请对应数据库（接口返回数据）字段名|
 |data-function|functionFoater|使用函数返回字段的值，非必须，支持html|
 
+
+**data-function 回调函数**
+functionFoater(index,value,row);
+
 #### 接口请求如下所示
 1.接口返回数据规范
 ```
