@@ -41,6 +41,7 @@
 		    refresh-table-interval="20" 
 		    show-pagination="true"
 		    pagination-limit="15"
+		    show-table-row-click="true"
 		    >  
 			  <tr id="table_header"> 
 				<th data-name="checkbox">操作</th>
@@ -86,6 +87,7 @@ function imageController(value){
 |refresh-table-interval|10|自动刷新周期、auto-refresh-table为true生效|
 |show-pagination|true/flase|是否显示分页条|
 |pagination-limit|10|每页数据条数|
+|show-table-row-click|true|是否可以单击数据项|
 #### table字段属性
 | 字段属性 | 演示 | 备注 |
 |----|-----|-------|

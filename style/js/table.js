@@ -1,6 +1,6 @@
 //============================================
-//		2018-04-27  By Fanhua
-//		DzAdmin 1.0.6
+//		2018-06-06  By Fanhua
+//		DzAdmin 1.0.9
 //============================================
 var prePage = "&laquo;";
 var nextPage = "&raquo;";
@@ -174,6 +174,13 @@ if (typeof(table_data.attr("show-pagination")) != "undefined") {
         hiddenPager();
 }
 
+//table
+if (typeof(table_data.attr("show-table-row-click")) != "undefined") {
+	table_data.on("click","tr",function(){
+		tableRowClick($(this).index() - 1);
+	});
+}
+
 //立即加载
 if (typeof(url) != "undefined") {
     Table(url, data_extra_param);
@@ -190,6 +197,10 @@ function hiddenPager() {
 */
 function toolBarOnClick(index) {
     alert("请复写toolBarOnClick(int index);");
+}
+
+function tableRowClick(index){
+	alert("请复写tableRowClick(int index);");
 }
 
 
