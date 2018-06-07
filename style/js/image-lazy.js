@@ -1,5 +1,5 @@
 /*
-*	名称：图片懒加载插件
+*	名称：图片延迟加载插件
 *	作者：董志平
 *	日期：2017-04-07 22:25
 */
@@ -48,7 +48,7 @@ var Images = {
 }
 
 /**
-*  使用教程：Images.init("style/img/loading.png","lazy-src",2);//初始化懒加载插件
+*  使用教程：Images.init("style/img/loading.png","lazy-src",2);//初始化延迟加载插件
 *  <img lazy-src="xxx" src="style/img/loading.png" alt="">
 *
 */

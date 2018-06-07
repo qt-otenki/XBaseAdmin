@@ -177,8 +177,16 @@ if (typeof(table_data.attr("show-pagination")) != "undefined") {
 //table
 if (typeof(table_data.attr("show-table-row-click")) != "undefined") {
 	table_data.on("click","tr",function(){
-		tableRowClick($(this).index() - 1);
+		var index = $(this).index() - 1;
+		tableRowClick(index,data[index]);
 	});
+}
+
+if (typeof(toolbar_onclick) != "undefined" && toolbar_onclick == "true") {
+    $("#table_toolbar button").click(function () {
+        var index = $(this).index();
+        toolBarOnClick(index);
+    });
 }
 
 //立即加载
@@ -199,16 +207,8 @@ function toolBarOnClick(index) {
     alert("请复写toolBarOnClick(int index);");
 }
 
-function tableRowClick(index){
-	alert("请复写tableRowClick(int index);");
-}
-
-
-if (typeof(toolbar_onclick) != "undefined" && toolbar_onclick == "true") {
-    $("#table_toolbar button").click(function () {
-        var index = $(this).index();
-        toolBarOnClick(index);
-    });
+function tableRowClick(index,row){
+	alert("请复写tableRowClick(index,row);");
 }
 
 

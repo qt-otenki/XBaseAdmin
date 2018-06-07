@@ -1,6 +1,6 @@
 //============================================
-//		2018-04-27  By Fanhua
-//		DzAdmin 1.0.6
+//		2018-06-07  By Fanhua
+//		DzAdmin 1.0.9
 //============================================
 var header;
 var title;
@@ -55,7 +55,7 @@ $(document).ready(function(){
 
 
 	iframe_refresh.click(function(){
-		refresh();
+		refreshWindow();
 	});
 
 
@@ -100,7 +100,7 @@ function openWindow(url){
 	iframe.attr("src",url);
 }
 
-function refresh(){
+function refreshWindow(){
 	var src = iframe.attr("src");
 	openWindow(src);
 }
@@ -111,6 +111,16 @@ function desktop(){
 
 function getChild(){
 	return window.frames['iframe'];
+}
+
+//刷新界面
+function reloadWindow(){
+	window.document.reload();
+}
+
+//界面跳转
+function redirect(url){
+	document.location.href = url;
 }
 
 

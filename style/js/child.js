@@ -1,20 +1,24 @@
 //============================================
-//		2018-04-27  By Fanhua
-//		DzAdmin 1.0.6
+//		2018-06-07  By Fanhua
+//		DzAdmin 1.0.9
 //============================================
+//父类对象
 function getParent(){
 	return window.parent;
 }
 
+function reloadWindow(){
+	getParent().reloadWindow();
+}
 
-//打开新窗口
+
 function openWindow(url){
 	 getParent().openWindow(url);
 }
 
 //创新当前窗口
 function refreshWindow(){
-	getParent().refresh();
+	getParent().refreshWindow();
 }
 
 //返回桌面
@@ -34,5 +38,5 @@ function closeLoading(){
 
 //界面跳转
 function redirect(url){
-	document.location.href = url;
+	getParent().redirect(url);
 }

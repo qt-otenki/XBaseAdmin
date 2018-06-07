@@ -59,10 +59,20 @@
 <script src="style/js/table.js"></script>
 <script src="style/js/child.js"></script>
 <script language="javascript" type="text/javascript">
+	showLoading("测试...");
+	setTimeout(function(){
+		closeLoading();
+	},3000);
+
+
 	function toolBarOnClick(index){
     	if(index == 0){
     		back();
     	}
+	}
+	
+	function tableRowClick(index,row){
+		alert(JSON.stringify(row));
 	}
 
 	//渲染图片显示的方法

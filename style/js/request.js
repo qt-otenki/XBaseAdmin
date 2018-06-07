@@ -1,3 +1,8 @@
+//============================================
+//		2018-06-07  By Fanhua
+//		DzAdmin 1.0.9
+//============================================
+
 //获取QueryString的数组
 function getQueryString() {
     var result = location.search.match(new RegExp("[\?\&][^\?\&]+=[^\?\&]+", "g"));

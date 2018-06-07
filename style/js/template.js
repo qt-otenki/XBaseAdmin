@@ -1,7 +1,8 @@
-/**
- *  html 模板解析插件。by Fanhua
- *
- */
+//============================================
+//		2018-06-07  By Fanhua
+//		DzAdmin 1.0.9
+//============================================
+
 function parseTemplate(json,tempPath,selector){
     var temp = $.ajax({
         url: tempPath+".html",
@@ -9,7 +10,7 @@ function parseTemplate(json,tempPath,selector){
         async:false,
         dataType: "html"});
     if(temp.readyState != 4){
-        alert(tempPath +"模板获取失败");
+        alert("模板获取失败,请检查！");
     }
     temp = temp.responseText;
     var html = Array();
