@@ -2,6 +2,7 @@
 //		2018-06-07  By Fanhua
 //		DzAdmin 1.0.9
 //============================================
+
 var header;
 var title;
 var con;
@@ -24,7 +25,7 @@ $(document).ready(function(){
 	initWindow();
 	
 	$("#header_name").text(projectName);
-	$("#right").append("<div id='copyright'>"+ copyRight +"</div>");
+	$("#right").append("<div id='copyright'>"+ copyRight +"&nbsp;&nbsp;版本号："+ version +"</div>");
 	document.title = projectName;
 
 	title = $('.childTitle');
