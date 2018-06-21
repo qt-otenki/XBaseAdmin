@@ -9,7 +9,7 @@
 
 ### 1.快速搭建后台界面
 >	首先我给大家看一看搭建后的图。
-![搭建的后台首页](http://upload-images.jianshu.io/upload_images/5065466-6103b7dca0be19c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![搭建的后台首页](https://github.com/fanhua1994/XBaseAdmin/blob/master/image/2018-01-13%2021-58-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png?raw=true)
 
 
 ### 2.表格渲染的使用方法
