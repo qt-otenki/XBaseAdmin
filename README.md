@@ -135,7 +135,7 @@ getSelectedRow();
 + 2018.02.27 DzTable加入自动刷新功能。
 + 2018.05.26 XBaseAdmin初始化开发。
 + 2018.06.01 XbaseAdmin完善外菜单栏。
-+ 预计加入头像
++ 2018.06.21 加入头像显示。
 
 ### 4.作者邮箱
 > 90fanhua@gmail.com

@@ -16,6 +16,8 @@ var desktop_link;
 function initWindow(){
 	var height = $(window).height();
 	var width = $(window).width();
+	
+	console.log(width + ":" + height);
 	$("#wrap").css("height",height - 50);
 	$("#right").css("width",width - 230);
 	$("#iframe").css({"height":height - 110});

@@ -2,7 +2,11 @@
 //		2018-06-07  By Fanhua
 //		DzAdmin 1.0.9
 //============================================
-//父类对象
+
+function getTop(){
+	return window.top;	
+}
+
 function getParent(){
 	return window.parent;
 }

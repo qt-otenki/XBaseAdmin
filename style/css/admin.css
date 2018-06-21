@@ -135,6 +135,17 @@ html,body{padding:0px;margin:0px;overflow-x: hidden; overflow-y: hidden;}
 	margin:5px;
 }
 
+#header #header_avatar{
+	float: right;
+	width:40px;
+	height:40px;
+	border-radius: 20px;
+	border:2px solid #FFF;
+	margin-right: 10px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
 #header #header_user{
 	float:right;
 	color:#fff;
