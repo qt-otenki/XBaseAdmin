@@ -39,6 +39,7 @@ ul, li{
   background: #273135;
   cursor: pointer;
   color:#FFFFFF;
+  clear: both;
 }
 
 .title:hover{

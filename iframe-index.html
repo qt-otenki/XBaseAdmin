@@ -7,8 +7,10 @@
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <link rel="stylesheet" href="style/css/iframe-dialog.css" />
+
   <script src="style/js/jquery-3.2.1.min.js"></script>
   <script src="style/js/child.js"></script>
+
  
   <title></title>
  </head>
@@ -18,6 +20,8 @@
 	<button id="validation">表单校验演示</button>
 	
 	<button id="openWebDialog">打开web弹窗</button>
+	
+	<button id="openToast">打开Toast提示</button>
 	
 	
 	  <script src="style/js/iframe-dialog.js"></script>
@@ -32,6 +36,10 @@
 		
 		$("#openWebDialog").click(function(){
 			showWebDialog("网页测试","https://www.baidu.com");
+		});
+		
+		$("#openToast").click(function(){
+			getParent().toast("温馨提示","欢迎使用XBaseAdmin框架",'success');
 		});
 	</script>
  </body>
