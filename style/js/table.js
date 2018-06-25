@@ -326,7 +326,7 @@ function Table(url, data_extra_param) {
     }
     
     if(typeof(data_sort_name) != "undefined"){
-    	data_extra_param = data_extra_param + "&" + data_sort_name + "=" + data_sort_order;
+    	data_extra_param = data_extra_param + "&sortname=" + data_sort_name + "&sortorder=" + data_sort_order;
     }
 
     offset = (page - 1) * page_limit;
