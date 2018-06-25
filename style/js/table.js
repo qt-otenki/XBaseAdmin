@@ -184,7 +184,7 @@ if (typeof(table_data.attr("show-pagination")) != "undefined") {
 
 //table
 if (typeof(table_data.attr("show-table-row-click")) != "undefined") {
-	table_data.on("click","tr",function(){
+	table_data.on("dblclick","tr",function(){
 		var index = $(this).index() - 1;
 		tableRowClick(index,data[index]);
 	});
