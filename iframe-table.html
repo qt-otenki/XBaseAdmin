@@ -34,7 +34,9 @@
 		  </div>
 		  <table 
 		  	id="table_data"
-		    data-url="data.json" 
+		    data-url="data.json"
+		    data-sort-name="id"
+		    data-sort-order="asc"
 		    data-extra-param="aaa=2&bbb=4&vvv=444" 
 		    data-toolbar-onclick="true" 
 		    auto-refresh-table="false" 
@@ -77,11 +79,10 @@
 
 	//渲染图片显示的方法
 	function imageController(index,value,row){
-		//alert(JSON.stringify(row));
 		return "<img src='"+ value +"' />";
 	}
 	
-	function operationController(index,value){
+	function operationController(index,value,row){
 		return "<a href=''>删除"+ index +"</a>";
 	}
 	

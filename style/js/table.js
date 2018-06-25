@@ -128,6 +128,8 @@ var data_extra_param;//表格参数
 var auto_refresh_table = false;//是否自动刷新表格
 var refresh_table_interval = 5;//单位秒
 var show_pagination = true;
+var data_sort_name;//排序字段
+var data_sort_order;
 
 table_data = $("#table_data");
 header = $("#table_header");
@@ -140,12 +142,18 @@ url = table_data.attr("data-url");
 toolbar_onclick = table_data.attr("data-toolbar-onclick");
 data_extra_param = table_data.attr("data-extra-param");
 auto_refresh_table = table_data.attr("auto-refresh-table");
+data_sort_name = table_data.attr("data-sort-name");
+data_sort_order = table_data.attr("data-sort-order");
 
 data_name = new Array();
 data_function = new Array();
 data_name_index = 0;
 data_function_index = 0;
 data_count = 0;
+
+if(typeof(data_sort_order) == "undefined"){
+	data_sort_order = "asc";
+}
 
 //启动自动刷新
 if (typeof(table_data.attr("refresh-table-interval")) != "undefined") {
@@ -313,14 +321,18 @@ function updateTable() {
 function Table(url, data_extra_param) {
     if (typeof(data_extra_param) != "undefined" && data_extra_param.length != 0) {
         data_extra_param = "&" + data_extra_param;
-    } else {
-        data_extra_param = "";
+    }else{
+    	data_extra_param = "";
+    }
+    
+    if(typeof(data_sort_name) != "undefined"){
+    	data_extra_param = data_extra_param + "&" + data_sort_name + "=" + data_sort_order;
     }
 
     offset = (page - 1) * page_limit;
-    api_url = url;
+    api_url = url + "?limit=" + page_limit + "&page=" + page + "&offset=" + offset + "&random=" + Math.random() + data_extra_param;
     loading.show().text("正在加载数据..");
-    $.getJSON(url + "?limit=" + page_limit + "&page=" + page + "&offset=" + offset + "&random=" + Math.random() + data_extra_param, function (json, status) {
+    $.getJSON(api_url, function (json, status) {
         data = json["rows"];
         data_count = json["total"];
         page_count = Math.ceil(data_count / page_limit);

@@ -84,10 +84,12 @@ function imageController(value){
 |data-extra-param| name=aaa&age=20|扩展参数，会自动拼接到url后面|
 |data-toolbar-onclick|true | 是否需要自动注册工具栏点击事件，默认不注册|
 |auto-refresh-table|true/false|是否需要自动刷新，默认不自动刷新|
-|refresh-table-interval|10|自动刷新周期、auto-refresh-table为true生效|
+|refresh-table-interval|10|自动刷新周期、auto-refresh-table为true生效,单位秒|
 |show-pagination|true/flase|是否显示分页条|
 |pagination-limit|10|每页数据条数|
 |show-table-row-click|true|是否可以单击数据项|
+|data-sort-name|user_id|排序字段|
+|data-sort-order|asc|排序方式，asc,desc。默认是asc|
 #### table字段属性
 | 字段属性 | 演示 | 备注 |
 |----|-----|-------|
