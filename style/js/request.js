@@ -4,7 +4,7 @@
 //============================================
 
 //获取QueryString的数组
-function getQueryString() {
+function getQueryStringArray() {
     var result = location.search.match(new RegExp("[\?\&][^\?\&]+=[^\?\&]+", "g"));
     if (result == null) {
         return "";
@@ -37,6 +37,26 @@ function getQueryStringByIndex(index) {
     var startIndex = result.indexOf("=") + 1;
     result = result.substring(startIndex);
     return decodeURI(result);
+}
+
+//获取域名
+function getDomain(){
+	return document.domain;
+}
+
+//获取当前URL
+function getUrl(){
+	return window.location.href;
+}
+
+//刷新浏览器
+function reloadBrowser(){
+	window.document.reload();
+}
+
+//界面跳转
+function redirect(url){
+	document.location.href = url;
 }
 
 //获取浏览器类型

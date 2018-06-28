@@ -115,15 +115,5 @@ function getChild(){
 	return window.frames['iframe'];
 }
 
-//刷新界面
-function reloadWindow(){
-	window.document.reload();
-}
-
-//界面跳转
-function redirect(url){
-	document.location.href = url;
-}
-
 
 
