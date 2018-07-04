@@ -61,6 +61,7 @@ $(document).ready(function(){
 	});
 
 
+	//这里单击事件需要改变
 	title.click(function(){
 		var t = $(this).find("span").eq(1).text();
 		var menuItem = $(this).next();
