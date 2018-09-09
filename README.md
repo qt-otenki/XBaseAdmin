@@ -87,7 +87,7 @@ function imageController(value){
 |refresh-table-interval|10|自动刷新周期、auto-refresh-table为true生效,单位秒|
 |show-pagination|true/flase|是否显示分页条|
 |pagination-limit|10|每页数据条数|
-|show-table-row-click|true|是否可以单击数据项|
+|show-table-row-click|true|是否可以双击数据项|
 |data-sort-name|user_id|排序字段|
 |data-sort-order|asc|排序方式，asc,desc。默认是asc|
 #### table字段属性
@@ -125,9 +125,11 @@ http://127.0.0.1:8020/DzAdmin/data.json?limit=15&page=1&offset=0&random=0.882155
 
 
 ## table.js
-updateTable();//刷新数据
-getSelectedRows();
-getSelectedRow();
+updateTable();//刷新表数据
+
+getSelectedRows();//获取所有选中的数据
+
+getSelectedRow();//获取选中的第一条数据
 
 ### 3.更新详情
 + 2017.09.21 更新多皮肤切换。美化分页条

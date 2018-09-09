@@ -12,27 +12,27 @@ function getParent(){
 }
 
 function reloadWindow(){
-	getParent().reloadWindow();
+	getTop().reloadWindow();
 }
 
 
 function openWindow(url){
-	 getParent().openWindow(url);
+	 getTop().openWindow(url);
 }
 
 //创新当前窗口
 function refreshWindow(){
-	getParent().refreshWindow();
+	getTop().refreshWindow();
 }
 
 //返回桌面
 function desktop(){
-	getParent().desktop();
+	getTop().desktop();
 }
 
 //打开加载中
 function showLoading(title){
-	getParent().showLoading(title);
+	getTop().showLoading(title);
 }
 
 //关闭加载中
@@ -42,5 +42,5 @@ function closeLoading(){
 
 //界面跳转
 function redirect(url){
-	getParent().redirect(url);
+	getTop().redirect(url);
 }
