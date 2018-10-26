@@ -316,6 +316,11 @@ function updateTable() {
     Table(url, data_extra_param);
 }
 
+//设置扩展参数
+function setExtraParams(params){
+	data_extra_param = params;
+}
+
 
 //解析接口json数据 并刷新表
 function Table(url, data_extra_param) {

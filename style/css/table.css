@@ -1,4 +1,8 @@
 /**********表格**************/
+#table{
+	margin: 5px;
+}
+
 #table #table_data {
     width: 100%;
 }
