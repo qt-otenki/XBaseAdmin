@@ -292,7 +292,7 @@ function refreshTable() {
                 row = data[i];
                 item = data[i][data_name[j]];
 
-                if (typeof(item) == "undefined")
+                if (typeof(item) == "undefined" || item == "" || item == "null")
                     item = " - ";
 
                 if (typeof(data_function[j]) == "undefined") {

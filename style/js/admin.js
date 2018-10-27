@@ -91,6 +91,17 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		initWindow();
 	});
+
+    var iframeObj = document.getElementById("iframe");
+    if (iframeObj.attachEvent) {
+        iframeObj.attachEvent("onload", function() {
+           closeLoading();
+        });
+    } else {
+        iframeObj.onload = function() {
+           closeLoading();
+        };
+    }
 });
 
 //=======需要继承的方法========
@@ -100,6 +111,7 @@ function menuBarOnClick(index, url) {
 
 //========菜单相关的操作=========
 function openWindow(url) {
+    showLoading("正在加载中..");
 	iframe.attr("src", url);
 }
 
