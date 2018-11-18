@@ -82,6 +82,8 @@ $(document).ready(function() {
 	});
 
 	link.click(function() {
+		var title = $(this).parent().prev().find("span").eq(1).text();
+        nav_first.text(title);
 		var linkText = $(this).text();
 		var linkSrc = $(this).attr("data-url");
 		nav_second.attr("src", linkSrc).text(linkText);
