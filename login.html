@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
@@ -15,7 +15,7 @@
 			<form class="form">
 				<input type="text" placeholder="Username">
 				<input type="password" placeholder="Password">
-				<button type="submit" id="login-button">Login</button>
+				<div class="login-button" id="login-button">Login</div>
 			</form>
 		</div>
 		
@@ -43,7 +43,7 @@ function success(){
 	window.location.href = "index.html";
 }
 
-$('#login-button').click(function (event) {
+$('.login-button').click(function (event) {
 	success();
 });
 </script>
