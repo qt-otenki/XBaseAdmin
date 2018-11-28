@@ -6,50 +6,9 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <link rel="stylesheet" href="style/css/iframe-dialog.css" />
-
-  <script src="style/js/jquery-3.2.1.min.js"></script>
-  <script src="style/js/child.js"></script>
-
- 
   <title></title>
  </head>
  <body>
-	<button id="table">表格演示</button>
-	
-	<button id="validation">表单校验演示</button>
-	
-	<button id="openWebDialog">打开web弹窗</button>
-	
-	<button id="openToast">打开Toast提示</button>
-	
-	<button id="openLoading">打开Loading提示</button>
-	
-	
-	<script src="style/js/iframe-dialog.js"></script>
-	<script>
-		$("#table").click(function(){
-			openWindow("iframe-table.html");
-		});
-		
-		$("#validation").click(function(){
-			openWindow("iframe-validation.html");
-		});
-		
-		$("#openWebDialog").click(function(){
-			showWebDialog("网页测试","https://www.baidu.com");
-		});
-		
-		$("#openToast").click(function(){
-			getParent().toast("温馨提示","欢迎使用XBaseAdmin框架",'success');
-		});
-		
-		$("#openLoading").click(function(){
-			getParent().showLoading("正在加载中");
-			setTimeout(function(){
-				getParent().closeLoading();
-			},3000);
-		});
-	</script>
+	你好，XBaseAdmin
  </body>
 </html>
