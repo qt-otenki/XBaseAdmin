@@ -9,10 +9,14 @@
 
 ## Tabs
 http://git.oschina.net/hbbcs/bootStrap-addTabs
+版本号：2.0.0(20181130)
 
 ### 1.快速搭建后台界面
->	首先我给大家看一看搭建后的图。
-![搭建的后台首页](https://github.com/fanhua1994/XBaseAdmin/blob/master/image/2018-01-13%2021-58-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png?raw=true)
+>	V1.0.0效果
+![V1.0.0搭建的后台首页](https://github.com/fanhua1994/XBaseAdmin/blob/master/image/2018-01-13%2021-58-05%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png?raw=true)
+
+>	V2.0.0效果
+![V2.0.0搭建的后台首页](https://github.com/fanhua1994/XBaseAdmin/blob/master/image/TIM%E5%9B%BE%E7%89%8720181130110003.png?raw=true)
 
 
 ### 2.表格渲染的使用方法
