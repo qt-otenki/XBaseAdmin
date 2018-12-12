@@ -6091,7 +6091,7 @@ if (typeof jQuery === 'undefined') {
                 $.blockUI({
                     target: '.tab-content',
                     boxed: true,
-                    message: '<div class="loaderbox"><div class="loading-activity"></div> 加载中......</div>',
+                    message: '<div class="loaderbox"><div class="loading-activity"></div> 加载中...</div>',
                     animate: true
                 });
 
@@ -6747,11 +6747,11 @@ if (typeof jQuery === 'undefined') {
         //asyncleftmenu: true,
         //leftmenu:'.sidebar-menu',
         local: {
-            'refreshLabel': ' 刷新此标签',
-            'closeThisLabel': ' 关闭此标签',
-            'closeOtherLabel': ' 关闭其他标签',
-            'closeLeftLabel': ' 关闭左侧标签',
-            'closeRightLabel': ' 关闭右侧标签'
+            'refreshLabel': ' 刷新',
+            'closeThisLabel': ' 关闭',
+            'closeOtherLabel': ' 关闭',
+            'closeLeftLabel': ' 关闭左侧',
+            'closeRightLabel': ' 关闭右侧'
         },
         callback: function () { //关闭后回调函数
         }
@@ -6963,7 +6963,7 @@ if (typeof jQuery === 'undefined') {
                 $.blockUI({
                     target: '.tab-content',
                     boxed: true,
-                    message: '<div class="loaderbox"><div class="loading-activity"></div> 加载中......</div>',
+                    message: '<div class="loaderbox"><div class="loading-activity"></div> 加载中...</div>',
                     animate: true
                 });
 
@@ -7005,7 +7005,7 @@ if (typeof jQuery === 'undefined') {
             $.blockUI({
                 target: '.tab-content',
                 boxed: true,
-                message: '<div class="loaderbox"><div class="loading-activity"></div> 加载中......</div>',
+                message: '<div class="loaderbox"><div class="loading-activity"></div> 加载中...</div>',
                 animate: true
             });
             var $iframe=$("<iframe>", {
