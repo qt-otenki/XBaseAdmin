@@ -28,9 +28,13 @@ http://git.oschina.net/hbbcs/bootStrap-addTabs
 ```
 #### 第二步 加入table代码
 ```
-<div id="table">
-		  <div id="table_toolbar">
+<div id="xbase-table-box">
+		  <div id="xbase-table-toolbar">
 			<!-- http://www.runoob.com/try/demo_source/bootstrap3-glyph-icons.htm   菜单图标定义 -->
+			<button type="button" class="btn btn-default btn-sm" id="back_btn">
+				<span class="glyphicon glyphicon-share-alt"></span> 返回上级
+			</button>
+			
 			<button type="button" class="btn btn-default btn-sm" id="table_delete_btn">
 				<span class="glyphicon glyphicon-trash"></span> 导出数据
 			</button>
@@ -40,26 +44,29 @@ http://git.oschina.net/hbbcs/bootStrap-addTabs
 			</button>
 		  </div>
 		  <table 
-		  	id="table_data"
-		    data-url="data.json" 
-		    data-extra-param="" 
+		  	id="xbase-table"
+		    data-url="data.json"
+		    data-sort-name="id"
+		    data-sort-order="asc"
+		    data-extra-param="aaa=2&bbb=4&vvv=444" 
 		    data-toolbar-onclick="true" 
-		    auto-refresh-table="true" 
+		    auto-refresh-table="false" 
 		    refresh-table-interval="20" 
 		    show-pagination="true"
-		    pagination-limit="15"
-		    show-table-row-click="true"
+		    pagination-limit="10"
+		    show-table-row-dbclick="true"
 		    >  
-			  <tr id="table_header"> 
-				<th data-name="checkbox">操作</th>
-				<th data-name="id">ID</th>  
+			  <tr id="xbase-table-header">
+				<th data-name="checkbox">全选</th>
+				<th data-name="id" data-width="50">ID</th>
 				<th data-name="name">名称</th>  
 				<th data-name="price">价格</th>
 				<th data-name="image" data-function="imageController">图片</th>
+				<th data-name="operation" data-function="operationController">操作</th>
 			  </tr>  
 		</table>  
-		<div id="table_loading">正在加载数据..</div>
-		<div id="pager"></div>
+		<div id="xbase-table-loading">正在加载数据..</div>
+		<div id="xbase-pagination"></div>
 	</div>
 ```
 
@@ -94,9 +101,10 @@ function imageController(value){
 |refresh-table-interval|10|自动刷新周期、auto-refresh-table为true生效,单位秒|
 |show-pagination|true/flase|是否显示分页条|
 |pagination-limit|10|每页数据条数|
-|show-table-row-click|true|是否可以双击数据项|
+|show-table-row-dbclick|true|是否可以双击数据项|
 |data-sort-name|user_id|排序字段|
 |data-sort-order|asc|排序方式，asc,desc。默认是asc|
+|data-width|50|50代表50px   px可加可不加。|
 #### table字段属性
 | 字段属性 | 演示 | 备注 |
 |----|-----|-------|

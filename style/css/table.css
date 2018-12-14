@@ -1,19 +1,24 @@
 /**********表格**************/
-#table{
+#xbase-table-box{
 	margin: 5px;
 }
 
-#table #table_data {
+#xbase-table-box #xbase-table {
     width: 100%;
+}
+
+#xbase-table-box #xbase-table-toolbar {
+    height: 50px;
+    line-height: 50px;
 }
 
 th {
     font: bold 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-    color: #4A4A4A;
-    border-right: 1px solid #C1DAD7;
-    border-bottom: 2px solid #C1DAD7;
-    border-top: 1px solid #C1DAD7;
-    border-left: 1px solid #C1DAD7;
+    color: #909399;
+    border-right: 1px solid #EBEEF5;
+    border-bottom: 1px solid #EBEEF5;
+    border-top: 1px solid #EBEEF5;
+    border-left: 1px solid #EBEEF5;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
@@ -23,12 +28,12 @@ th {
 }
 
 td {
-    border-right: 1px solid #C1DAD7;
-    border-bottom: 1px solid #C1DAD7;
+    border-right: 1px solid #EBEEF5;
+    border-bottom: 1px solid #EBEEF5;
     padding: 3px 3px 3px 6px;
-    color: #4f6b72;
+    color: #606266;
     min-width: 50px;
-    max-width: 50%;
+    max-width: 200px;
     text-align: center;
 }
 
@@ -45,7 +50,7 @@ td input {
 }
 
 td:nth-child(1) {
-    border-left: 1px solid #C1DAD7;
+    border-left: 1px solid #EBEEF5;
     border-top: 0;
     font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 }
@@ -64,62 +69,61 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background: #F9F9F9;
+    background: #F5F7FA;
 }
 
-#table #table_loading {
+#table #xbase-table-loading {
     text-align: center;
     margin: 5px;
 }
 
-#pager {
+#xbase-pagination {
     clear: both;
-    height:40px;
+    height:36px;
     margin-top: 5px;
 }
 
-#pager a {
-    color: #0000CC;
+#xbase-pagination a:hover {
+    color:#409EFF;
 }
 
-#pager a:hover {
-    border: 1px solid #3388FF;
-}
-
-#pager a {
-    border-right: 1px solid #CCC;
-    border-top: 1px solid #CCC;
-    border-bottom: 1px solid #CCC;
+#xbase-pagination a {
     display: inline-block;
-    padding: 4px;
     text-align: center;
     text-decoration: none;
-    min-width: 40px;
-    color: #a17ef1;
+    min-width: 30px;
+    color: #606266;
+    background: #F4F4F5;
+    border-radius: 2px;
+    margin: 3px;
+    height:30px;
+    line-height: 30px;
+    font-weight: bold;
 }
 
-#pager span {
+#xbase-pagination span {
     display: inline-block;
-    min-width: 40px;
-    color: #ccc;
-    padding: 4px;
+    min-width: 30px;
+    color: #606266;
     text-align: center;
-    border-right: 1px solid #CCC;
-    border-top: 1px solid #CCC;
-    border-bottom: 1px solid #CCC;
+    background: #F4F4F5;
+    border-radius: 2px;
+    margin: 3px;
+    height: 30px;
+    line-height: 30px;
 }
 
-#pager .prevPage {
-    border-radius: 5px 0px 0px 5px;
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
+#xbase-pagination .currentPage {
+    background: #409EFF;
+    color:#FFF;
 }
 
-#pager .nextPage {
-    border-radius: 0px 5px 5px 0px;
+#xbase-pagination .prevPage {
+
 }
 
-#table_toolbar {
-    height: 50px;
-    line-height: 50px;
+#xbase-pagination .nextPage {
+
 }
+
+

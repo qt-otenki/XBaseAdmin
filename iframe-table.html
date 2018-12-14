@@ -16,8 +16,8 @@
   <title></title>
  </head>
  <body>
-   <div id="table">
-		  <div id="table_toolbar">
+   <div id="xbase-table-box">
+		  <div id="xbase-table-toolbar">
 			<!-- http://www.runoob.com/try/demo_source/bootstrap3-glyph-icons.htm   菜单图标定义 -->
 			<button type="button" class="btn btn-default btn-sm" id="back_btn">
 				<span class="glyphicon glyphicon-share-alt"></span> 返回上级
@@ -32,7 +32,7 @@
 			</button>
 		  </div>
 		  <table 
-		  	id="table_data"
+		  	id="xbase-table"
 		    data-url="data.json"
 		    data-sort-name="id"
 		    data-sort-order="asc"
@@ -42,19 +42,19 @@
 		    refresh-table-interval="20" 
 		    show-pagination="true"
 		    pagination-limit="10"
-		    show-table-row-click="true"
+		    show-table-row-dbclick="true"
 		    >  
-			  <tr id="table_header"> 
+			  <tr id="xbase-table-header">
 				<th data-name="checkbox">全选</th>
-				<th data-name="id">ID</th>  
+				<th data-name="id" data-width="50">ID</th>
 				<th data-name="name">名称</th>  
 				<th data-name="price">价格</th>
 				<th data-name="image" data-function="imageController">图片</th>
 				<th data-name="operation" data-function="operationController">操作</th>
 			  </tr>  
 		</table>  
-		<div id="table_loading">正在加载数据..</div>
-		<div id="pager"></div>
+		<div id="xbase-table-loading">正在加载数据..</div>
+		<div id="xbase-pagination"></div>
 	</div>
 
 <script src="style/js/table.js"></script>
