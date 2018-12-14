@@ -9,7 +9,6 @@
 
 ## Tabs
 http://git.oschina.net/hbbcs/bootStrap-addTabs
-版本号：2.0.0(20181130)
 
 ### 1.快速搭建后台界面
 >	V1.0.0效果
@@ -17,6 +16,9 @@ http://git.oschina.net/hbbcs/bootStrap-addTabs
 
 >	V2.0.0效果
 ![V2.0.0搭建的后台首页](https://github.com/fanhua1994/XBaseAdmin/blob/master/image/TIM%E5%9B%BE%E7%89%8720181130110003.png?raw=true)
+
+>  News Tables 仿Element
+![仿ElementUI表格样式](https://github.com/fanhua1994/XBaseAdmin/blob/master/image/Table%202.0.png?raw=true)
 
 
 ### 2.表格渲染的使用方法
