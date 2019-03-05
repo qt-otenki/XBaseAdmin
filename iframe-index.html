@@ -14,7 +14,8 @@
 	你好，XBaseAdmin
     <div id="app">
        <button v-on:click="openTabs">打开新的Tabs</button>
-     <button v-on:click="closeTabs">关闭新的Tabs</button>
+		<button v-on:click="closeTabs">关闭新的Tabs</button>
+		<button v-on:click="xbaseTable">XBase-Table演示</button>	
     </div>
  <script>
   new Vue({
@@ -25,7 +26,10 @@
           },
           closeTabs(){
               closeTab("index");
-          }
+          },
+		  xbaseTable(){
+			  addTab("index","XbaseTable","iframe-table.html");
+		  }
       }
   });
  </script>

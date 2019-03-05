@@ -68,7 +68,7 @@ http://git.oschina.net/hbbcs/bootStrap-addTabs
 			  </tr>  
 		</table>  
 		<div id="xbase-table-loading">正在加载数据..</div>
-		<div id="xbase-pagination"></div>
+		<div id="xbase-table-pagination"></div>
 	</div>
 ```
 

@@ -72,22 +72,22 @@ tr:hover {
     background: #F5F7FA;
 }
 
-#table #xbase-table-loading {
+#xbase-table-box #xbase-table-loading {
     text-align: center;
     margin: 5px;
 }
 
-#xbase-pagination {
+#xbase-table-pagination {
     clear: both;
     height:36px;
     margin-top: 5px;
 }
 
-#xbase-pagination a:hover {
+#xbase-table-pagination a:hover {
     color:#409EFF;
 }
 
-#xbase-pagination a {
+#xbase-table-pagination a {
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -101,7 +101,7 @@ tr:hover {
     font-weight: bold;
 }
 
-#xbase-pagination span {
+#xbase-table-pagination span {
     display: inline-block;
     min-width: 30px;
     color: #606266;
@@ -113,16 +113,16 @@ tr:hover {
     line-height: 30px;
 }
 
-#xbase-pagination .currentPage {
+#xbase-table-pagination .currentPage {
     background: #409EFF;
     color:#FFF;
 }
 
-#xbase-pagination .prevPage {
+#xbase-table-pagination .prevPage {
 
 }
 
-#xbase-pagination .nextPage {
+#xbase-table-pagination .nextPage {
 
 }
 

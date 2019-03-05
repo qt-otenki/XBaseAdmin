@@ -108,7 +108,7 @@ var nextPage = ">";
 var page_limit = 10;//分页显示的数据条数  与后台数据需保持一致
 var page_count = 0;//数据页数
 var page_init = 0;
-var xbase_pagination;//分页对象
+var xbase_table_pagination;//分页对象
 var xbase_table;
 var toolbar_onclick;//是否自动注册工具条按钮事件
 var xbase_table_loading;
@@ -134,7 +134,7 @@ var data_sort_order;
 xbase_table = $("#xbase-table");
 xbase_table_header = $("#xbase-table-header");
 xbase_table_loading = $("#xbase-table-loading");
-xbase_pagination = $("#xbase-pagination");
+xbase_table_pagination = $("#xbase-table-pagination");
 
 xbase_table.attr("cellspacing", 0);
 url = xbase_table.attr("data-url");
@@ -191,7 +191,7 @@ if (typeof(xbase_table.attr("show-table-row-dbclick")) != "undefined") {
 }
 
 if (typeof(toolbar_onclick) != "undefined" && toolbar_onclick == "true") {
-    $("#table_toolbar button").click(function () {
+    $("#xbase-table-toolbar button").click(function () {
         var index = $(this).index();
         toolBarOnClick(index);
     });
@@ -204,7 +204,7 @@ if (typeof(url) != "undefined") {
 
 //隐藏分页
 function hiddenPager() {
-    xbase_pagination.hide();
+    xbase_table_pagination.hide();
 }
 
 /*
@@ -245,9 +245,9 @@ function refreshTable() {
 
     if (show_pagination) {
         if (data_count <= page_limit) {
-            xbase_pagination.hide();
+            xbase_table_pagination.hide();
         } else {
-            xbase_pagination.show();
+            xbase_table_pagination.show();
         }
     }
 
@@ -348,7 +348,7 @@ function Table(url, data_extra_param) {
 
         //初始化分页控件
         if (page_init == 0) {
-            xbase_pagination.createPage({
+            xbase_table_pagination.createPage({
                 pageCount: page_count,//总页数
                 current: page,//当前页
                 backFn: function (p) {
