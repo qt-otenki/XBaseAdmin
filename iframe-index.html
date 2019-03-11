@@ -16,6 +16,7 @@
        <button v-on:click="openTabs">打开新的Tabs</button>
 		<button v-on:click="closeTabs">关闭新的Tabs</button>
 		<button v-on:click="xbaseTable">XBase-Table演示</button>	
+		<button v-on:click="xbasePage">分页条演示</button>	
     </div>
  <script>
   new Vue({
@@ -29,6 +30,9 @@
           },
 		  xbaseTable(){
 			  addTab("index","XbaseTable","iframe-table.html");
+		  },
+		  xbasePage(){
+			  addTab("index","XbaseTable","iframe-pagination.html");
 		  }
       }
   });
