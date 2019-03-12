@@ -7,6 +7,13 @@ function trim(x) {
     return x.replace(/^\s+|\s+$/gm,'');
 }
 
+function isArray(arg) {
+    if (typeof arg === 'object') {
+        return Object.prototype.toString.call(arg) === '[object Array]';
+    }
+    return false;
+}
+
 //判断是否为空
 function isEmpty(val) {
 	val = trim(val);

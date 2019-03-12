@@ -1,3 +1,11 @@
+
+function isArray(arg) {
+    if (typeof arg === 'object') {
+        return Object.prototype.toString.call(arg) === '[object Array]';
+    }
+    return false;
+}
+
 /**
  *  负责将数据进行渲染到网页上
  */
